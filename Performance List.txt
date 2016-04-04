@@ -1,0 +1,12 @@
+Node.JS performance list
+1. Use MongoDB cursor with streams as much as possible, don't save result in some variables
+cursor.stream().pipe(JSONStream.stringify()).pipe(res);
+2. Always use DB projection
+cursor.project(projection)
+3. Run your code with production mode
+4. Minify everything you are going to send and work with
+5. Use nginx to serve static content
+6. Limit the use of session variables
+7. Use cache
+8. Use async as much as possible
+9. Keep your code as small as possible. Delete all unused modules.
